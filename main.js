@@ -2,9 +2,9 @@ let alphaNum = ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','
 let vals = process.argv.slice(2)
 var str=""
 for (let i = 0; i < vals.length; i++) {
-    let num = vals[i]
-    for (let j = 0; j < num.length; j++) {
-        var digit = parseInt(num[j]);
+    const num = vals[i]
+    for (let c of num) {
+        var digit = parseInt(c);
         str = str.concat(alphaNum[digit])
     }
     str = str.concat(",")
